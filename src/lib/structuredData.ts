@@ -22,7 +22,8 @@ export function buildStructuredData() {
       {
         "@type": "ProfessionalService",
         "@id": `${siteConfig.url}/#service`,
-        name: `${siteConfig.fullName} – ${siteConfig.jobTitle}`,
+        name: siteConfig.title,
+        alternateName: siteConfig.brand,
         description: siteConfig.description,
         url: siteConfig.url,
         telephone,

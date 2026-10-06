@@ -47,7 +47,7 @@ In alternativa, da CLI: `npx wrangler pages deploy` (legge `wrangler.toml`).
 ## Da completare
 
 - dominio definitivo in `src/config/site.ts` (usato da canonical, sitemap, Open Graph, JSON-LD);
-- numero di iscrizione all'Albo, P.IVA, email;
+- email;
 - foto (hero e "Chi sono") e immagine Open Graph (`src/app/opengraph-image.jpg`);
 - testo personale nella sezione "Chi sono";
 - favicon personalizzata.

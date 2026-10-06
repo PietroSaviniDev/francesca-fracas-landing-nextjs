@@ -1,9 +1,9 @@
 import { siteConfig } from "@/config/site";
 
 export const about = {
-  title: "Ciao, sono Francesca.",
+  title: `Ciao, sono ${siteConfig.name}.`,
   paragraphs: [
-    "Sono psicologa, laureata in Psicologia Clinica e della Riabilitazione. Il mio lavoro è offrirti uno spazio sicuro, senza giudizio, in cui rallentare e dare un nome a ciò che stai vivendo, con i tuoi tempi.",
+    `Dietro ${siteConfig.brand} ci sono io: sono la ${siteConfig.fullName}, psicologa, laureata in Psicologia Clinica e della Riabilitazione. Il mio lavoro è offrirti uno spazio sicuro, senza giudizio, in cui rallentare e dare un nome a ciò che stai vivendo, con i tuoi tempi.`,
     // TODO: testo da personalizzare con Francesca.
     "[Personalizza: il tuo approccio, la tua formazione, cosa ti ha portata a fare questo lavoro.]",
   ],

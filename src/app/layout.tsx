@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: siteConfig.locale,
     url: "/",
-    siteName: siteConfig.fullName,
+    siteName: siteConfig.title,
     title: siteConfig.title,
     description: siteConfig.description,
   },
@@ -48,7 +48,8 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="it" className={`${serif.variable} ${sans.variable}`}>
-      <body>{children}</body>
+      {/* Le estensioni del browser (es. ColorZilla) aggiungono attributi al body: evita falsi errori di hydration. */}
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

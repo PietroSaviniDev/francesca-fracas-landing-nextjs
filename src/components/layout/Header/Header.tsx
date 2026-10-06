@@ -7,8 +7,8 @@ export function Header() {
   return (
     <header className={styles.wrapper}>
       <div className={styles.bar}>
-        <a href="#top" className={styles.brand} aria-label={`${siteConfig.name} – torna all'inizio`}>
-          <span className={styles.name}>{siteConfig.name}</span>
+        <a href="#top" className={styles.brand} aria-label={`${siteConfig.title} – torna all'inizio`}>
+          <span className={styles.name}>{siteConfig.brand}</span>
           <span className={styles.tagline}>{siteConfig.tagline}</span>
         </a>
 

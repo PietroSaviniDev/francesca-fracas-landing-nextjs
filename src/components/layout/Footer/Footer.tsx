@@ -9,8 +9,10 @@ export function Footer() {
     <footer className={styles.footer}>
       <div className={styles.columns}>
         <div className={styles.column}>
-          <p className={styles.brand}>{siteConfig.name}</p>
+          <p className={styles.brand}>{siteConfig.title}</p>
           <p className={styles.text}>
+            {siteConfig.fullName}
+            <br />
             Psicologa Clinica e della Riabilitazione
             <br />
             Albo degli Psicologi n. {siteConfig.alboNumber}
@@ -30,11 +32,7 @@ export function Footer() {
 
         <div className={styles.column}>
           <h2 className={styles.heading}>Informazioni</h2>
-          <p className={styles.text}>
-            P.IVA {siteConfig.vatNumber}
-            <br />
-            Sedute online in tutta Italia
-          </p>
+          <p className={styles.text}>Sedute online in tutta Italia</p>
         </div>
       </div>
 
