@@ -1,0 +1,30 @@
+.section {
+  padding: 0 24px 100px;
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 72px 32px;
+  border-radius: var(--radius-lg);
+  background: var(--navy);
+  text-align: center;
+}
+
+.content {
+  position: relative;
+}
+
+.text {
+  max-width: 54ch;
+  margin: 18px auto 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.cta {
+  margin-top: 30px;
+}

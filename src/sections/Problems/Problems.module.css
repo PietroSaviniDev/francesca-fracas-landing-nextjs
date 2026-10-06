@@ -1,0 +1,49 @@
+.section {
+  position: relative;
+  margin-top: -1px;
+  background: var(--mist);
+}
+
+/* Incavo decorativo che "aggancia" la sezione all'hero. */
+.notch {
+  position: absolute;
+  top: -59px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 60px;
+  fill: var(--mist);
+}
+
+.inner {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  padding: 72px 24px 96px;
+  text-align: center;
+}
+
+.grid {
+  margin-top: 40px;
+}
+
+.closing {
+  margin-top: 44px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--navy);
+}
+
+.closing strong {
+  font-weight: 700;
+}
+
+.cta {
+  margin-top: 24px;
+}
+
+@media (max-width: 760px) {
+  .notch {
+    top: -39px;
+    height: 40px;
+  }
+}

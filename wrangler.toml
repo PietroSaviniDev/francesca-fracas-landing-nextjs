@@ -1,0 +1,4 @@
+name = "francesca-fracas"
+compatibility_date = "2026-10-01"
+# Cartella generata da `next build` con output: "export".
+pages_build_output_dir = "out"

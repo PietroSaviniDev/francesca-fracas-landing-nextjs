@@ -1,0 +1,20 @@
+.fab {
+  position: fixed;
+  right: 20px;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--slate);
+  color: var(--white);
+  box-shadow: 0 6px 18px rgba(47, 62, 82, 0.3);
+  transition: transform 0.15s ease;
+}
+
+.fab:hover {
+  transform: translateY(-1px);
+}

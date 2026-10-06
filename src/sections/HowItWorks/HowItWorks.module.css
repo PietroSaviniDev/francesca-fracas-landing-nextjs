@@ -1,0 +1,43 @@
+.section {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 100px 24px;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 48px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  flex: 1 1 260px;
+  padding-top: 22px;
+  border-top: 1.5px solid var(--slate);
+}
+
+.number {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 40px;
+  line-height: 1;
+  color: var(--slate);
+}
+
+.title {
+  margin-top: 14px;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.text {
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}

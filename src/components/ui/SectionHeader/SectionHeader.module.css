@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.center {
+  align-items: center;
+  text-align: center;
+}
+
+.left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.label {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: var(--slate);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.title {
+  font-size: var(--fs-h2);
+  line-height: 1.15;
+  color: var(--navy);
+}
+
+.inverted .label {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.inverted .title {
+  color: var(--white);
+}

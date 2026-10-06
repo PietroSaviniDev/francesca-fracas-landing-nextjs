@@ -1,0 +1,98 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  background: var(--swirl);
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  /* 140px in alto = spazio dell'header sovrapposto + respiro. */
+  padding: 140px 24px 120px;
+}
+
+.content {
+  flex: 1 1 520px;
+  min-width: 0;
+}
+
+.title {
+  font-size: clamp(38px, 4.6vw, 58px);
+  line-height: 1.08;
+  color: var(--ink);
+}
+
+.lead {
+  max-width: 50ch;
+  margin-top: 22px;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.lead strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.note {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.note strong {
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.card {
+  flex: 0 1 440px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  box-shadow: 0 10px 30px rgba(47, 62, 82, 0.12);
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 22px 24px;
+  text-align: center;
+}
+
+.captionName {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  color: var(--ink);
+}
+
+.captionRole {
+  font-size: 13px;
+  color: var(--slate);
+}
+
+@media (max-width: 760px) {
+  .inner {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}

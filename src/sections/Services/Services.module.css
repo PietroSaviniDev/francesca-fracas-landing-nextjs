@@ -1,0 +1,13 @@
+.section {
+  padding: 100px 24px;
+  background: var(--sand);
+}
+
+.inner {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+}
+
+.grid {
+  margin-top: 40px;
+}

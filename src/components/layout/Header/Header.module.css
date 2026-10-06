@@ -1,0 +1,69 @@
+/* Sovrapposto all'hero, che ne fornisce lo sfondo a onde. */
+.wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  padding: 20px 24px 0;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  padding: 10px 12px 10px 28px;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 1px 3px rgba(47, 62, 82, 0.08);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: var(--navy);
+}
+
+.tagline {
+  margin-top: 3px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.nav a:hover {
+  color: var(--navy);
+}
+
+@media (max-width: 900px) {
+  .nav {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .bar {
+    padding-left: 20px;
+  }
+
+  .tagline {
+    display: none;
+  }
+}
