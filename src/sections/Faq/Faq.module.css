@@ -60,6 +60,60 @@
   color: var(--ink-soft);
 }
 
+/* --- Animazione di apertura ---
+ * 1. il pannello si allarga animando l'altezza (::details-content + interpolate-size);
+ * 2. a pannello aperto, la risposta compare con una dissolvenza.
+ * Nei browser che non supportano ::details-content l'apertura resta istantanea.
+ */
+.item {
+  interpolate-size: allow-keywords;
+}
+
+.item::details-content {
+  block-size: 0;
+  overflow: hidden;
+  transition:
+    block-size 0.35s ease,
+    content-visibility 0.35s allow-discrete;
+}
+
+.item[open]::details-content {
+  block-size: auto;
+}
+
+/* In chiusura il testo sparisce subito, prima che il pannello si richiuda. */
+.answer {
+  opacity: 0;
+  transform: translateY(-6px);
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
+}
+
+/* In apertura il testo arriva dopo che il pannello ha iniziato ad aprirsi. */
+.item[open] .answer {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.35s ease 0.2s,
+    transform 0.35s ease 0.2s;
+}
+
+@starting-style {
+  .item[open] .answer {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item::details-content,
+  .answer,
+  .item[open] .answer {
+    transition: none;
+  }
+}
+
 @media (min-width: 768px) {
   .list {
     margin-top: 40px;

@@ -1,0 +1,18 @@
+.brand {
+  white-space: nowrap;
+}
+
+/*
+ * Barra separatrice: deve leggersi come segno grafico, non come una "l".
+ * Font serif sottile, più alta delle lettere, staccata e nel colore d'accento.
+ */
+.bar {
+  display: inline-block;
+  margin: 0 0.22em;
+  /* Su fondi scuri il contenitore può impostare --brand-bar-color. */
+  color: var(--brand-bar-color, var(--slate));
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1;
+  transform: scaleY(1.25);
+}

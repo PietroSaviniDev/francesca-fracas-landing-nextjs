@@ -1,3 +1,4 @@
+import { inPersonPlace } from "@/lib/inPerson";
 import type { Feature } from "./types";
 
 /** Sezione dedicata agli italiani che vivono all'estero. */
@@ -6,6 +7,12 @@ export const expat = {
   title: "Lontano da casa, ma nella tua lingua",
   intro:
     "Trasferirsi all'estero è una scelta coraggiosa, ma può portare con sé solitudine, nostalgia e la fatica di ricominciare da capo. Parlare di ciò che senti nella tua lingua madre, con qualcuno che conosce la tua cultura, fa la differenza.",
+  /** Box in evidenza per chi vive in Belgio, dove Francesca riceve anche in studio. */
+  inPerson: {
+    title: "Vivi in Belgio? Possiamo vederci anche di persona",
+    text: `Oltre alle sedute online, ricevo in presenza ${inPersonPlace}: puoi scegliere l'incontro dal vivo, online o alternare le due modalità in base alle tue esigenze.`,
+    cta: "Prenota un incontro di persona",
+  },
   features: [
     {
       icon: "chat",

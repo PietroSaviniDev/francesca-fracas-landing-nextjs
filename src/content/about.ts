@@ -1,4 +1,5 @@
 import { siteConfig } from "@/config/site";
+import { inPersonPlace } from "@/lib/inPerson";
 
 export const about = {
   title: `Ciao, sono ${siteConfig.name}.`,
@@ -11,5 +12,6 @@ export const about = {
     siteConfig.degree,
     `Iscritta all'Albo degli Psicologi, n. ${siteConfig.alboNumber}`,
     "Sedute online in videochiamata, in Italia e all'estero",
+    `Sedute in presenza ${inPersonPlace}`,
   ],
 };

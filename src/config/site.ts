@@ -15,7 +15,7 @@ export const siteConfig = {
   fullName: "Dott.ssa Francesca Fracas",
   jobTitle: "Psicologa Clinica",
   description:
-    "Fra|ncamente: supporto psicologico online in italiano con la Dott.ssa Francesca Fracas, psicologa clinica, in Italia e per gli italiani all'estero. Prima consulenza gratuita su WhatsApp.",
+    "Fra|ncamente: supporto psicologico online in italiano con la Dott.ssa Francesca Fracas, psicologa clinica, in Italia e per gli italiani all'estero, anche in presenza in Belgio. Prima consulenza gratuita su WhatsApp.",
   keywords: [
     "psicologa online",
     "psicologa italiana all'estero",
@@ -23,6 +23,7 @@ export const siteConfig = {
     "psicologa italiana Belgio",
     "psicologa italiana Bruxelles",
     "supporto psicologico expat",
+    "psicologa italiana in presenza Belgio",
     "psicologo online",
     "psicologa clinica",
     "ansia",
@@ -32,7 +33,13 @@ export const siteConfig = {
     "sostegno psicologico adolescenti",
     "prima consulenza gratuita",
   ],
-  degree: "Laurea in Psicologia Clinica e della Riabilitazione",
+  // Sedute in presenza (oltre all'online).
+  inPerson: {
+    country: "Belgio",
+    // TODO: città dello studio, es. "Bruxelles" (verrà mostrata come "a Bruxelles").
+    city: "",
+  },
+  degree:"Laurea in Psicologia Clinica e della Riabilitazione",
   // TODO: dati da completare.
   alboNumber: "33958",
   email: "[EMAIL@DOMINIO.IT]",

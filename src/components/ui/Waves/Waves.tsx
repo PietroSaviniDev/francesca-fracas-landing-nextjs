@@ -16,17 +16,17 @@ interface WavesProps {
 
 /** Sfondo decorativo a onde, posizionato in assoluto sul contenitore padre. */
 export function Waves({ variant, height }: WavesProps) {
-  const { paths, width, strokeWidth, className } = variants[variant];
+  const variantStyle = variants[variant];
 
   return (
     <svg
       aria-hidden="true"
-      viewBox={`0 0 ${width} ${height}`}
+      viewBox={`0 0 ${variantStyle.width} ${height}`}
       preserveAspectRatio="xMidYMid slice"
-      className={`${styles.waves} ${className}`}
+      className={`${styles.waves} ${variantStyle.className}`}
     >
-      <g fill="none" strokeWidth={strokeWidth} strokeLinejoin="round" strokeLinecap="round">
-        {paths.map((d, index) => (
+      <g fill="none" strokeWidth={variantStyle.strokeWidth} strokeLinejoin="round" strokeLinecap="round">
+        {variantStyle.paths.map((d, index) => (
           // --i sfasa l'animazione di ogni onda (vedi Waves.module.css).
           <path key={d} d={d} style={{ "--i": index } as React.CSSProperties} />
         ))}

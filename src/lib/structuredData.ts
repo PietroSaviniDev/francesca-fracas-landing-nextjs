@@ -35,6 +35,9 @@ export function buildStructuredData() {
           { "@type": "Place", name: "Europa" },
         ],
         availableLanguage: "it",
+        // Online ovunque + in presenza in Belgio.
+        // TODO: aggiungere "address" (PostalAddress) quando lo studio in Belgio è definito.
+        serviceType: ["Consulenza psicologica online", `Consulenza psicologica in presenza in ${siteConfig.inPerson.country}`],
         founder: { "@id": personId },
         hasOfferCatalog: {
           "@type": "OfferCatalog",

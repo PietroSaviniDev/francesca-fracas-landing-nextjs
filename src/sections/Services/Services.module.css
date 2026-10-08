@@ -1,10 +1,12 @@
 .section {
+  /* Taglia gli elementi in parallax che escono dalla sezione. */
+  overflow: hidden;
   padding: var(--section-space) var(--gutter);
   background: var(--sand);
 }
 
 .inner {
-  max-width: var(--container-narrow);
+  max-width: var(--container);
   margin: 0 auto;
 }
 
@@ -12,8 +14,117 @@
   margin-top: 32px;
 }
 
+/* --- Vantaggi dell'online --- */
+
+.online {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.onlineTitle {
+  font-size: 22px;
+  color: var(--navy);
+  text-align: center;
+}
+
+/* Mobile: una voce per riga. */
+.benefits {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.benefitIcon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--slate);
+  color: var(--slate);
+}
+
+.benefitTitle {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.benefitText {
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 480px) {
+  .benefits {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
 @media (min-width: 768px) {
   .grid {
     margin-top: 40px;
+  }
+
+  .online {
+    margin-top: 64px;
+    padding-top: 40px;
+  }
+
+  .onlineTitle {
+    font-size: 26px;
+  }
+
+  .benefits {
+    margin-top: 32px;
+  }
+}
+
+/* Desktop: tutti i vantaggi su una riga. */
+@media (min-width: 1024px) {
+  .benefits {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --- Comparsa sfalsata (attivata da RevealOnScroll) ---
+ * Card dei percorsi e voci "online" compaiono una alla volta (--i = posizione).
+ */
+.stagger li {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+  transition-delay: calc(var(--i, 0) * 0.15s);
+}
+
+[data-revealed="true"] .stagger li {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stagger li {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

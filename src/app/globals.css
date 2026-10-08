@@ -62,6 +62,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* I link interni (#sezione) non finiscono sotto l'header fisso. */
+  scroll-padding-top: 96px;
 }
 
 body {
@@ -104,6 +106,24 @@ summary:focus-visible {
 img {
   max-width: 100%;
   display: block;
+}
+
+/* Testi e immagini non selezionabili né trascinabili. */
+body {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+a,
+img,
+svg {
+  -webkit-user-drag: none;
+}
+
+/* Eccezione: i contatti restano copiabili. */
+address {
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 @media (prefers-reduced-motion: reduce) {

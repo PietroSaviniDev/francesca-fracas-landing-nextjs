@@ -1,7 +1,7 @@
-import { WhatsappButton } from "@/components/ui/ButtonLink/ButtonLink";
-import { FeatureGrid } from "@/components/ui/FeatureGrid/FeatureGrid";
 import { SectionHeader } from "@/components/ui/SectionHeader/SectionHeader";
 import { problems } from "@/content/problems";
+import { StaggeredCards } from "@/components/ui/StaggeredCards/StaggeredCards";
+import { TangledLine } from "./TangledLine";
 import styles from "./Problems.module.css";
 
 /** "Ti riconosci?": i problemi in cui il visitatore si identifica. */
@@ -13,11 +13,13 @@ export function Problems() {
         <path d="M0 60 L1440 60 L1440 59 L0 59 Z" />
       </svg>
 
+      <TangledLine />
+
       <div className={styles.inner}>
         <SectionHeader id="problems-title" label="Ti riconosci?" title="Ti senti così ultimamente?" />
 
         <div className={styles.grid}>
-          <FeatureGrid items={problems} />
+          <StaggeredCards items={problems} />
         </div>
 
         <p className={styles.closing}>
@@ -25,9 +27,6 @@ export function Problems() {
           <strong>non devi affrontarlo da solo.</strong>
         </p>
 
-        <div className={styles.cta}>
-          <WhatsappButton message="talk">Parliamone su WhatsApp</WhatsappButton>
-        </div>
       </div>
     </section>
   );

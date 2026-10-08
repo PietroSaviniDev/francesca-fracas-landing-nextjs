@@ -16,7 +16,9 @@
 }
 
 .inner {
-  max-width: var(--container-narrow);
+  /* Sopra il filo disegnato di sfondo. */
+  position: relative;
+  max-width: var(--container);
   margin: 0 auto;
   padding: 48px var(--gutter) var(--section-space);
   text-align: center;

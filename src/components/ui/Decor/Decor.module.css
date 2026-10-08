@@ -1,0 +1,20 @@
+.blob,
+.ring,
+.dots {
+  display: block;
+}
+
+.blob {
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.ring {
+  border: 1.5px solid;
+  border-radius: 50%;
+}
+
+.dots {
+  background-image: radial-gradient(var(--dot-color) 1.5px, transparent 1.6px);
+  background-size: 16px 16px;
+}

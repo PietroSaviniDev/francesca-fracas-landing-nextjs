@@ -1,4 +1,6 @@
+import { withBrand } from "@/components/ui/BrandName/BrandName";
 import { siteConfig } from "@/config/site";
+import { inPersonPlace } from "@/lib/inPerson";
 import { whatsappUrl } from "@/lib/whatsapp";
 import styles from "./Footer.module.css";
 
@@ -9,7 +11,7 @@ export function Footer() {
     <footer className={styles.footer}>
       <div className={styles.columns}>
         <div className={styles.column}>
-          <p className={styles.brand}>{siteConfig.title}</p>
+          <p className={styles.brand}>{withBrand(siteConfig.title)}</p>
           <p className={styles.text}>
             {siteConfig.fullName}
             <br />
@@ -32,7 +34,11 @@ export function Footer() {
 
         <div className={styles.column}>
           <h2 className={styles.heading}>Informazioni</h2>
-          <p className={styles.text}>Sedute online in italiano, in Italia e all&apos;estero</p>
+          <p className={styles.text}>
+            Sedute online in italiano, in Italia e all&apos;estero
+            <br />
+            In presenza {inPersonPlace}
+          </p>
         </div>
       </div>
 

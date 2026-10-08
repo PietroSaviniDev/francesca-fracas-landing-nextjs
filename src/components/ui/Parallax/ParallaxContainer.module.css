@@ -1,0 +1,29 @@
+.container {
+  position: relative;
+}
+
+/* Mobile first: elementi nascosti, compaiono solo da desktop. */
+.item {
+  position: absolute;
+  display: none;
+  pointer-events: none;
+  transform: translate3d(0, calc(var(--parallax-scroll, 0) * var(--parallax-speed) * 1px), 0);
+  will-change: transform;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .item {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item {
+    transform: none;
+  }
+}

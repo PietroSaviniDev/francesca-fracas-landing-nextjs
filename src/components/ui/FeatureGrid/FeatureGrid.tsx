@@ -11,8 +11,9 @@ interface FeatureGridProps {
 export function FeatureGrid({ items, minColumnWidth = 300 }: FeatureGridProps) {
   return (
     <ul className={styles.grid} style={{ "--min-col": `${minColumnWidth}px` } as React.CSSProperties}>
-      {items.map((item) => (
-        <li key={item.title} className={styles.card}>
+      {items.map((item, index) => (
+        // --i: posizione della card, utile per animazioni sfalsate definite dalle sezioni.
+        <li key={item.title} className={styles.card} style={{ "--i": index } as React.CSSProperties}>
           <span className={styles.icon}>
             <Icon name={item.icon} />
           </span>

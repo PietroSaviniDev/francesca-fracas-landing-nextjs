@@ -13,7 +13,7 @@ export function FreeConsultation() {
           <SectionHeader
             id="free-title"
             label="Prima consulenza"
-            title="Il primo colloquio è gratuito"
+            title="Il primo passo è il più difficile. Facciamolo insieme."
             tone="inverted"
           />
           <p className={styles.text}>

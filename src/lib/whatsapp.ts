@@ -6,7 +6,8 @@ export const whatsappMessages = {
   moreInfo: "Ciao Francesca, vorrei avere maggiori informazioni.",
   booking: "Ciao Francesca, vorrei prenotare la prima consulenza gratuita.",
   expat: "Ciao Francesca, vivo all'estero e vorrei prenotare la prima consulenza gratuita.",
-  talk:"Ciao Francesca, vorrei parlarti della mia situazione.",
+  inPerson: "Ciao Francesca, vivo in Belgio e vorrei prenotare un primo incontro di persona.",
+  talk: "Ciao Francesca, vorrei parlarti della mia situazione.",
 } as const;
 
 export type WhatsappMessage = keyof typeof whatsappMessages;

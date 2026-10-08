@@ -1,4 +1,5 @@
 import { siteConfig } from "@/config/site";
+import { inPersonPlace } from "@/lib/inPerson";
 
 /** Usate sia dalla sezione FAQ sia dal JSON-LD FAQPage. */
 export const faqs = [
@@ -16,6 +17,10 @@ export const faqs = [
     question: "Vivo all'estero: posso fare un percorso con te?",
     answer:
       "Certo. Le sedute sono online e in italiano, quindi puoi seguirle da qualsiasi Paese: fissiamo gli appuntamenti tenendo conto del tuo fuso orario.",
+  },
+  {
+    question: "Posso incontrarti di persona?",
+    answer: `Sì, se vivi in Belgio: ricevo in presenza ${inPersonPlace}. Puoi scegliere tra incontri dal vivo, sedute online o alternare le due modalità.`,
   },
   {
     question: "Quanto dura un percorso?",

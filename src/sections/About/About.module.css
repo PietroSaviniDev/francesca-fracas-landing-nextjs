@@ -1,11 +1,14 @@
-/* Mobile: foto sopra, testo sotto. */
 .section {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
   max-width: var(--container);
   margin: 0 auto;
   padding: var(--section-space) var(--gutter);
+}
+
+/* Mobile: foto sopra, testo sotto. */
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .photo {
@@ -55,8 +58,37 @@
   transform: translateY(-1px);
 }
 
-.cta {
-  margin-top: 28px;
+/* --- Animazioni d'ingresso (attivate da RevealOnScroll) --- */
+
+/* Foto: dissolvenza. */
+.photo {
+  opacity: 0;
+  transition: opacity 1.2s ease-out;
+}
+
+/* Testo: ogni blocco sale leggermente e appare, uno dopo l'altro. */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out;
+  transition-delay: calc(0.3s + var(--reveal-step, 0) * 0.15s);
+}
+
+[data-revealed="true"] .photo,
+[data-revealed="true"] .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo,
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -76,15 +108,11 @@
   .credentials {
     margin-top: 28px;
   }
-
-  .cta {
-    margin-top: 32px;
-  }
 }
 
 /* Desktop: foto e testo affiancati. */
 @media (min-width: 1024px) {
-  .section {
+  .layout {
     flex-direction: row;
     align-items: center;
     gap: 64px;

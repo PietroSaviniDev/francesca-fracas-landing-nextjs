@@ -26,6 +26,7 @@
   font-family: var(--font-serif);
   font-size: 21px;
   color: var(--white);
+  --brand-bar-color: var(--mist);
 }
 
 .heading {

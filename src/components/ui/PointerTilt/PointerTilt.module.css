@@ -1,0 +1,6 @@
+/* Senza mouse (o su mobile) le variabili non vengono mai impostate: nessuna inclinazione. */
+.tilt {
+  transform: perspective(900px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+  transition: transform 0.4s ease-out;
+  will-change: transform;
+}

@@ -1,0 +1,39 @@
+.svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.line {
+  fill: none;
+  stroke: var(--white);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-opacity: 0.75;
+  /* Linea "non ancora disegnata": il tratto è tutto spostato fuori. */
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 4s ease-in-out;
+}
+
+/* Secondo tratto più sottile e leggermente sfalsato, come una ripassata a matita. */
+.echo {
+  stroke-width: 1.5;
+  stroke-opacity: 0.45;
+  transform: translate(6px, 4px);
+  transition-delay: 0.3s;
+}
+
+.drawn .line {
+  stroke-dashoffset: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .line {
+    stroke-dashoffset: 0;
+    transition: none;
+  }
+}

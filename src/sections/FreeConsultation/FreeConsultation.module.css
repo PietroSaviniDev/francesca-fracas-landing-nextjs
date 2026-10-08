@@ -31,7 +31,7 @@
 
 @media (min-width: 768px) {
   .box {
-    padding: 72px 32px;
+    padding: 72px 18px;
   }
 
   .text {
@@ -41,5 +41,12 @@
 
   .cta {
     margin-top: 30px;
+  }
+}
+
+/* Desktop: il titolo occupa tutta la riga invece di essere bilanciato su più righe corte. */
+@media (min-width: 1024px) {
+  .content h2 {
+    text-wrap: wrap;
   }
 }

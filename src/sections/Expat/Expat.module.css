@@ -6,7 +6,7 @@
 
 .inner {
   position: relative;
-  max-width: var(--container-narrow);
+  max-width: var(--container);
   margin: 0 auto;
   padding: var(--section-space) var(--gutter);
   text-align: center;
@@ -21,11 +21,79 @@
 }
 
 .grid {
+  /* La sezione è già sabbia: la card chiara diventa bianca per staccarsi. */
+  --card-light-bg: var(--white);
   margin-top: 32px;
 }
 
 .cta {
   margin-top: 32px;
+}
+
+/* --- Box "di persona in Belgio" --- */
+
+/* Mobile: icona, testo e bottone impilati. */
+.inPerson {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 40px;
+  padding: 24px 20px;
+  border-left: 3px solid var(--slate);
+  border-radius: 0 var(--radius-lg);
+  background: var(--white);
+  box-shadow: 5px 10px 30px rgba(47, 62, 82, 0.14);
+  text-align: left;
+}
+
+.inPersonIcon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--chip);
+  color: var(--navy);
+}
+
+.inPersonTitle {
+  font-size: 22px;
+  line-height: 1.25;
+  color: var(--navy);
+}
+
+.inPersonText {
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 768px) {
+  .inPerson {
+    margin-top: 56px;
+    padding: 28px 32px;
+  }
+
+  .inPersonTitle {
+    font-size: 24px;
+  }
+}
+
+/* Desktop: tutto su una riga. */
+@media (min-width: 1024px) {
+  .inPerson {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .inPersonBody {
+    flex: 1;
+  }
 }
 
 @media (min-width: 768px) {
@@ -40,5 +108,38 @@
 
   .cta {
     margin-top: 40px;
+  }
+}
+
+/* --- Comparsa allo scroll (attivata da RevealOnScroll) ---
+ * Si usa "translate" e non "transform", che le card usano già per lo sfalsamento.
+ */
+.fade,
+.stagger li {
+  opacity: 0;
+  translate: 0 18px;
+  transition:
+    opacity 0.7s ease-out,
+    translate 0.7s ease-out;
+}
+
+/* Le card partono dopo titolo e testo, una ogni 0.15s. */
+.stagger li {
+  transition-delay: calc(0.3s + var(--i, 0) * 0.15s);
+}
+
+[data-revealed="true"] .fade,
+[data-revealed="true"].fade,
+[data-revealed="true"] .stagger li {
+  opacity: 1;
+  translate: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade,
+  .stagger li {
+    opacity: 1;
+    translate: none;
+    transition: none;
   }
 }

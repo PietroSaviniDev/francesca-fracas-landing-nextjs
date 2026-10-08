@@ -1,0 +1,126 @@
+/* Mobile: una card per riga. */
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  min-height: 200px;
+  padding: 22px 22px 24px;
+  /* Arrotondati solo top-right e bottom-left, come nel riferimento. */
+  border-radius: 0 var(--radius-lg);
+  box-shadow: 5px 10px 30px rgba(47, 62, 82, 0.14);
+}
+
+.number {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.title {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.text {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* --- Varianti --- */
+
+.dark {
+  background: var(--slate);
+  color: var(--white);
+}
+
+.dark .text {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.light {
+  background: var(--card-light-bg, var(--swirl));
+  color: var(--navy);
+}
+
+.light .text {
+  color: var(--ink-soft);
+}
+
+/* Effetto vetro: nessun colore, sfoca solo ciò che sta dietro la card. */
+.glass {
+  background: transparent;
+  color: var(--navy);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+.glass .text {
+  color: var(--ink);
+}
+
+/* Smartphone grandi e tablet: due colonne. */
+@media (min-width: 480px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    min-height: 240px;
+  }
+}
+
+/* Desktop: quattro colonne sfalsate in altezza, come una scala. */
+@media (min-width: 1024px) {
+  .list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    padding-bottom: 32px;
+  }
+
+  .card {
+    min-height: 280px;
+    padding: 26px 24px 28px;
+  }
+
+  .card:nth-child(even) {
+    transform: translateY(32px);
+  }
+
+  .number {
+    font-size: 46px;
+  }
+}
+
+/* Titolo e testo sempre in fondo alla card, anche senza numero. */
+.body {
+  margin-top: auto;
+}
+
+/* Senza numero: titolo in alto e testo centrato nello spazio restante. */
+.unnumbered .body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.unnumbered .text {
+  margin-block: auto;
+}

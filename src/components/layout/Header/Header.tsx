@@ -1,14 +1,18 @@
+import { BrandName } from "@/components/ui/BrandName/BrandName";
 import { WhatsappButton } from "@/components/ui/ButtonLink/ButtonLink";
 import { siteConfig } from "@/config/site";
 import { navLinks } from "@/content/navigation";
 import styles from "./Header.module.css";
+import { ScrollAwareHeader } from "./ScrollAwareHeader";
 
 export function Header() {
   return (
-    <header className={styles.wrapper}>
+    <ScrollAwareHeader className={styles.wrapper}>
       <div className={styles.bar}>
         <a href="#top" className={styles.brand} aria-label={`${siteConfig.title} – torna all'inizio`}>
-          <span className={styles.name}>{siteConfig.brand}</span>
+          <span className={styles.name}>
+            <BrandName />
+          </span>
           <span className={styles.tagline}>{siteConfig.tagline}</span>
         </a>
 
@@ -24,6 +28,6 @@ export function Header() {
           Scrivimi
         </WhatsappButton>
       </div>
-    </header>
+    </ScrollAwareHeader>
   );
 }
