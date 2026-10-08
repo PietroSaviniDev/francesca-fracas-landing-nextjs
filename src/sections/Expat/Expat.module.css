@@ -1,0 +1,44 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  background: var(--swirl);
+}
+
+.inner {
+  position: relative;
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  padding: var(--section-space) var(--gutter);
+  text-align: center;
+}
+
+.intro {
+  max-width: 60ch;
+  margin: 18px auto 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.grid {
+  margin-top: 32px;
+}
+
+.cta {
+  margin-top: 32px;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    margin-top: 22px;
+    font-size: 17px;
+  }
+
+  .grid {
+    margin-top: 40px;
+  }
+
+  .cta {
+    margin-top: 40px;
+  }
+}

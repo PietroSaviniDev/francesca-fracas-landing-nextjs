@@ -4,6 +4,7 @@ import { WhatsappFab } from "@/components/layout/WhatsappFab/WhatsappFab";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildStructuredData } from "@/lib/structuredData";
 import { About } from "@/sections/About/About";
+import { Expat } from "@/sections/Expat/Expat";
 import { Faq } from "@/sections/Faq/Faq";
 import { FinalCta } from "@/sections/FinalCta/FinalCta";
 import { FreeConsultation } from "@/sections/FreeConsultation/FreeConsultation";
@@ -24,6 +25,7 @@ export default function HomePage() {
         <Problems />
         <About />
         <Services />
+        <Expat />
         <HowItWorks />
         <FreeConsultation />
         <OnlineBenefits />

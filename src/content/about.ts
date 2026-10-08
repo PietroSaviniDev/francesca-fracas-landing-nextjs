@@ -10,6 +10,6 @@ export const about = {
   credentials: [
     siteConfig.degree,
     `Iscritta all'Albo degli Psicologi, n. ${siteConfig.alboNumber}`,
-    "Sedute online in videochiamata, in tutta Italia",
+    "Sedute online in videochiamata, in Italia e all'estero",
   ],
 };

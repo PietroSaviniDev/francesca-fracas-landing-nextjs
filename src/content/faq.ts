@@ -13,6 +13,11 @@ export const faqs = [
       "Ci vediamo in videochiamata su una piattaforma sicura, dal tuo computer o dallo smartphone, dove ti senti più a tuo agio.",
   },
   {
+    question: "Vivo all'estero: posso fare un percorso con te?",
+    answer:
+      "Certo. Le sedute sono online e in italiano, quindi puoi seguirle da qualsiasi Paese: fissiamo gli appuntamenti tenendo conto del tuo fuso orario.",
+  },
+  {
     question: "Quanto dura un percorso?",
     answer:
       "Non c'è una durata fissa: dipende dai tuoi obiettivi. Ne parliamo insieme già dal primo colloquio.",

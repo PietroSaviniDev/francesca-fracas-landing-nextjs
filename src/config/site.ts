@@ -15,9 +15,14 @@ export const siteConfig = {
   fullName: "Dott.ssa Francesca Fracas",
   jobTitle: "Psicologa Clinica",
   description:
-    "Fra|ncamente: supporto psicologico online con la Dott.ssa Francesca Fracas, psicologa clinica. Percorsi individuali, di coppia, per adolescenti e famiglie. Prima consulenza gratuita su WhatsApp.",
+    "Fra|ncamente: supporto psicologico online in italiano con la Dott.ssa Francesca Fracas, psicologa clinica, in Italia e per gli italiani all'estero. Prima consulenza gratuita su WhatsApp.",
   keywords: [
     "psicologa online",
+    "psicologa italiana all'estero",
+    "psicologo italiano online expat",
+    "psicologa italiana Belgio",
+    "psicologa italiana Bruxelles",
+    "supporto psicologico expat",
     "psicologo online",
     "psicologa clinica",
     "ansia",

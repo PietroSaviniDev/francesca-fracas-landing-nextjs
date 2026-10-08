@@ -32,7 +32,7 @@ export function Footer() {
 
         <div className={styles.column}>
           <h2 className={styles.heading}>Informazioni</h2>
-          <p className={styles.text}>Sedute online in tutta Italia</p>
+          <p className={styles.text}>Sedute online in italiano, in Italia e all&apos;estero</p>
         </div>
       </div>
 

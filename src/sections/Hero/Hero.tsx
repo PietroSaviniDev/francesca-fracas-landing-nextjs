@@ -31,6 +31,8 @@ export function Hero() {
 
           <p className={styles.note}>
             <strong>La prima consulenza è gratuita</strong> · Risposta entro 24 ore
+            <br />
+            In italiano, in Italia e all&apos;estero
           </p>
         </div>
 

@@ -28,7 +28,12 @@ export function buildStructuredData() {
         description: siteConfig.description,
         url: siteConfig.url,
         telephone,
-        areaServed: { "@type": "Country", name: "Italia" },
+        // Online: Italia e italiani all'estero (in primis Belgio ed Europa).
+        areaServed: [
+          { "@type": "Country", name: "Italia" },
+          { "@type": "Country", name: "Belgio" },
+          { "@type": "Place", name: "Europa" },
+        ],
         availableLanguage: "it",
         founder: { "@id": personId },
         hasOfferCatalog: {
