@@ -29,6 +29,8 @@ src/
 
 Convenzioni:
 
+- **mobile first**: gli stili di base sono per smartphone, gli schermi più grandi si gestiscono solo con
+  `@media (min-width: …)` (breakpoint 480 / 768 / 1024, vedi `globals.css`);
 - ogni componente/sezione ha il suo `Nome.tsx` + `Nome.module.css`;
 - colori, spaziature e font si usano solo tramite le variabili in `globals.css`;
 - i testi si modificano in `src/content/`, i dati di contatto in `src/config/site.ts`;

@@ -7,15 +7,15 @@ export const siteConfig = {
   url: "https://www.francescafracas.it",
   locale: "it_IT",
   // Brand (lo stesso della pagina Instagram, da cui arriva il traffico).
-  brand: "Fra.ncamente",
-  title: "Fra.ncamente | Psicologia",
+  brand: "Fra|ncamente",
+  title: "Fra|ncamente - Psicologia",
   tagline: "Psicologia · Consulenze online",
   // Persona fisica dietro il brand.
   name: "Francesca Fracas",
   fullName: "Dott.ssa Francesca Fracas",
   jobTitle: "Psicologa Clinica",
   description:
-    "Fra.ncamente: supporto psicologico online con la Dott.ssa Francesca Fracas, psicologa clinica. Percorsi individuali, di coppia, per adolescenti e famiglie. Prima consulenza gratuita su WhatsApp.",
+    "Fra|ncamente: supporto psicologico online con la Dott.ssa Francesca Fracas, psicologa clinica. Percorsi individuali, di coppia, per adolescenti e famiglie. Prima consulenza gratuita su WhatsApp.",
   keywords: [
     "psicologa online",
     "psicologo online",

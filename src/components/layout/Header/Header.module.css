@@ -5,17 +5,17 @@
   right: 0;
   left: 0;
   z-index: 10;
-  padding: 20px 24px 0;
+  padding: 12px var(--gutter) 0;
 }
 
 .bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 12px;
   max-width: var(--container-wide);
   margin: 0 auto;
-  padding: 10px 12px 10px 28px;
+  padding: 8px 8px 8px 20px;
   border-radius: 40px;
   background: rgba(255, 255, 255, 0.92);
   box-shadow: 0 1px 3px rgba(47, 62, 82, 0.08);
@@ -29,11 +29,13 @@
 
 .name {
   font-family: var(--font-serif);
-  font-size: 20px;
+  font-size: 19px;
   color: var(--navy);
 }
 
+/* Mobile: solo il nome del brand, il sottotitolo compare con più spazio. */
 .tagline {
+  display: none;
   margin-top: 3px;
   font-size: 10px;
   letter-spacing: 0.12em;
@@ -41,8 +43,9 @@
   color: var(--ink-soft);
 }
 
+/* Mobile: navigazione nascosta, la pagina si scorre e il CTA resta visibile. */
 .nav {
-  display: flex;
+  display: none;
   gap: 32px;
   font-size: 14px;
   color: var(--ink-soft);
@@ -52,18 +55,29 @@
   color: var(--navy);
 }
 
-@media (max-width: 900px) {
-  .nav {
-    display: none;
+@media (min-width: 480px) {
+  .tagline {
+    display: block;
   }
 }
 
-@media (max-width: 420px) {
-  .bar {
-    padding-left: 20px;
+@media (min-width: 768px) {
+  .wrapper {
+    padding-top: 20px;
   }
 
-  .tagline {
-    display: none;
+  .bar {
+    gap: 20px;
+    padding: 10px 12px 10px 28px;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    display: flex;
   }
 }

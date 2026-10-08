@@ -26,8 +26,9 @@ export function Waves({ variant, height }: WavesProps) {
       className={`${styles.waves} ${className}`}
     >
       <g fill="none" strokeWidth={strokeWidth} strokeLinejoin="round" strokeLinecap="round">
-        {paths.map((d) => (
-          <path key={d} d={d} />
+        {paths.map((d, index) => (
+          // --i sfasa l'animazione di ogni onda (vedi Waves.module.css).
+          <path key={d} d={d} style={{ "--i": index } as React.CSSProperties} />
         ))}
       </g>
     </svg>

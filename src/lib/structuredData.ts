@@ -23,7 +23,8 @@ export function buildStructuredData() {
         "@type": "ProfessionalService",
         "@id": `${siteConfig.url}/#service`,
         name: siteConfig.title,
-        alternateName: siteConfig.brand,
+        // Anche la forma senza "|", che è quella che le persone digitano nelle ricerche.
+        alternateName: [siteConfig.brand, siteConfig.brand.replace("|", "")],
         description: siteConfig.description,
         url: siteConfig.url,
         telephone,

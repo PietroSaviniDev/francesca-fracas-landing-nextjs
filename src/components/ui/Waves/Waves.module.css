@@ -6,6 +6,31 @@
   pointer-events: none;
 }
 
+/*
+ * Ondeggiamento lento: ogni onda parte da un punto diverso del ciclo.
+ * I tracciati sporgono di 40px oltre il viewBox, quindi ±30px non scoprono i bordi.
+ */
+.waves path {
+  animation: drift 4s ease-in-out infinite alternate;
+  animation-delay: calc(var(--i, 0) * -10s);
+  will-change: transform;
+}
+
+@keyframes drift {
+  from {
+    transform: translate(-30px, -5px);
+  }
+  to {
+    transform: translate(30px, 5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .waves path {
+    animation: none;
+  }
+}
+
 .light {
   stroke: var(--white);
   stroke-opacity: 0.75;

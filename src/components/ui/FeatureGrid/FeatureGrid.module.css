@@ -1,7 +1,8 @@
+/* Mobile: una colonna; da tablet le colonne si adattano a --min-col. */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(var(--min-col, 300px), 100%), 1fr));
-  gap: 16px;
+  grid-template-columns: 1fr;
+  gap: 12px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -12,7 +13,7 @@
   display: flex;
   gap: 16px;
   align-items: flex-start;
-  padding: 22px 24px;
+  padding: 20px;
   border-radius: var(--radius-sm);
   background: var(--white);
   box-shadow: var(--shadow-card);
@@ -42,4 +43,15 @@
   font-size: 14px;
   line-height: 1.55;
   color: var(--ink-soft);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--min-col, 300px), 100%), 1fr));
+    gap: 16px;
+  }
+
+  .card {
+    padding: 22px 24px;
+  }
 }

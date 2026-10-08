@@ -1,5 +1,5 @@
 .section {
-  padding: 100px 24px;
+  padding: var(--section-space) var(--gutter);
   background: var(--sand);
 }
 
@@ -9,5 +9,11 @@
 }
 
 .grid {
-  margin-top: 40px;
+  margin-top: 32px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    margin-top: 40px;
+  }
 }

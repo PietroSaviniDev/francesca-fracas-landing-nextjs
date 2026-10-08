@@ -1,5 +1,6 @@
 .footer {
-  padding: 56px 24px 36px;
+  /* Spazio in basso extra su mobile per non finire sotto il pulsante WhatsApp fisso. */
+  padding: 48px var(--gutter) 96px;
   background: var(--navy);
   color: rgba(255, 255, 255, 0.8);
 }
@@ -8,7 +9,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 40px;
+  gap: 32px;
   max-width: var(--container);
   margin: 0 auto;
 }
@@ -55,4 +56,14 @@
   font-size: 12px;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.65);
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 56px var(--gutter) 36px;
+  }
+
+  .columns {
+    gap: 40px;
+  }
 }
